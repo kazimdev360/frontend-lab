@@ -30,10 +30,5 @@ Practice layouts
 
 ---
 
-## Goal
-To become confident in frontend development and build real-world web projects.
-
----
-
 ## Note
 This is a learning repository. Code may be simple as I improve step by step.
