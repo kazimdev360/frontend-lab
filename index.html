@@ -3,29 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer Card</title>
+  <title>Frontend Lab</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <button id="themeToggle" class="theme-btn">🌙</button>
+
   <div class="card">
-    <img src="https://i.pravatar.cc/150" alt="profile">
 
-    <h2>Your Name</h2>
-    <p class="role">Frontend Developer</p>
+    <img src="https://i.pravatar.cc/150" alt="profile" class="profile-img">
 
-    <p class="desc">
-      I am learning HTML and CSS and building clean, responsive web pages.
+    <h2>Frontend Lab</h2>
+
+    <p class="role">
+      <span id="typing"></span>
     </p>
 
-    <div class="skills">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>Flexbox</span>
-    </div>
+    <p class="desc">
+      Building modern, responsive and interactive web interfaces using HTML, CSS & JavaScript.
+    </p>
 
-    <button>Contact Me</button>
+    <div class="skills" id="skills"></div>
+
+    <button id="contactBtn">Contact Me</button>
   </div>
-<script src="script.js"></script>
+
+  <!-- Contact Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3>Contact Me</h3>
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="text" id="message" placeholder="Your Message">
+      <button id="sendBtn">Send</button>
+      <button id="closeBtn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
