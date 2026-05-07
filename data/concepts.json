@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "title": "Frontend ALL",
+    "version": "0.1"
+  },
+  "categories": [
+    {
+      "id": "html",
+      "title": "HTML",
+      "description": "Semantics, forms, media, accessibility, and document structure.",
+      "lessons": [
+        {
+          "id": "semantic-html",
+          "title": "Semantic HTML",
+          "level": "Beginner",
+          "estimatedTime": "20 min",
+          "summary": "Learn why semantic tags improve accessibility, SEO, and maintainability.",
+          "sections": [
+            {
+              "heading": "Why semantics matter",
+              "content": "Semantic HTML uses meaningful tags (like <header>, <nav>, <main>, <article>, <section>, <footer>) instead of generic ones. This helps screen readers, search engines, and developers understand the page structure."
+            },
+            {
+              "heading": "Common semantic tags",
+              "content": "Use <header> for introductory content, <nav> for navigation, <main> for primary content, <section> for thematic grouping, <article> for self-contained composition, and <footer> for closing information."
+            },
+            {
+              "heading": "Accessibility checklist",
+              "content": "Prefer headings in order, label form controls, ensure interactive elements are keyboard accessible, and avoid using only color to convey meaning."
+            }
+          ],
+          "resources": [
+            {
+              "title": "MDN - HTML reference",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "title": "MDN - Accessibility",
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/Accessibility"
+            }
+          ]
+        },
+        {
+          "id": "forms-and-validation",
+          "title": "Forms & Validation",
+          "level": "Beginner",
+          "estimatedTime": "25 min",
+          "summary": "Build forms that are usable: labels, input types, constraints, and error states.",
+          "sections": [
+            {
+              "heading": "Always label inputs",
+              "content": "Use <label for=...> to connect labels with inputs. This improves usability and screen reader experience."
+            },
+            {
+              "heading": "Use native validation",
+              "content": "Leverage HTML attributes like required, min/max, pattern, type, and inputmode. Provide helpful error messages."
+            },
+            {
+              "heading": "Progressive enhancement",
+              "content": "Rely on HTML validation and basic behavior first. Add richer UX with JavaScript (optional) without breaking core functionality."
+            }
+          ],
+          "resources": [
+            {
+              "title": "MDN - Forms",
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/Forms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css",
+      "title": "CSS",
+      "description": "Selectors, layout, responsiveness, animations, and maintainable styling.",
+      "lessons": [
+        {
+          "id": "box-model",
+          "title": "The CSS Box Model",
+          "level": "Beginner",
+          "estimatedTime": "20 min",
+          "summary": "Understand content, padding, borders, margins, and sizing behaviors.",
+          "sections": [
+            {
+              "heading": "Components",
+              "content": "Every element’s rendered size is determined by content box, padding, border, and margin. With box-sizing: border-box, width includes border and padding."
+            },
+            {
+              "heading": "Margin collapsing",
+              "content": "Vertical margins can collapse between block elements in specific situations. This affects layout spacing unexpectedly if you’re not aware."
+            },
+            {
+              "heading": "Practical guidance",
+              "content": "Prefer consistent box-sizing (commonly border-box) and use spacing utilities/patterns to avoid “magic numbers”."
+            }
+          ],
+          "codeSamples": [
+            {
+              "lang": "css",
+              "title": "Common box-sizing reset",
+              "code": "* { box-sizing: border-box; }"
+            }
+          ],
+          "resources": [
+            {
+              "title": "MDN - CSS box model",
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model"
+            }
+          ]
+        },
+        {
+          "id": "flexbox",
+          "title": "Flexbox Fundamentals",
+          "level": "Beginner",
+          "estimatedTime": "30 min",
+          "summary": "Learn flex containers, main/cross axes, and how to align items.",
+          "sections": [
+            {
+              "heading": "Container vs items",
+              "content": "Set display: flex on the container. Flex children become flex items. Properties on the container control the axes and wrapping."
+            },
+            {
+              "heading": "Key properties",
+              "content": "justify-content aligns along the main axis. align-items aligns along the cross axis. gap controls spacing between items."
+            },
+            {
+              "heading": "When to use flex",
+              "content": "Flexbox is great for one-dimensional layouts (row OR column). For two-dimensional layouts, consider CSS Grid."
+            }
+          ],
+          "codeSamples": [
+            {
+              "lang": "css",
+              "title": "Simple centered row",
+              "code": ".row {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 12px;\n}"
+            }
+          ],
+          "resources": [
+            {
+              "title": "MDN - Flexbox guide",
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "javascript",
+      "title": "JavaScript",
+      "description": "Core language concepts and modern async patterns.",
+      "lessons": [
+        {
+          "id": "scope-and-closures",
+          "title": "Scope & Closures",
+          "level": "Intermediate",
+          "estimatedTime": "35 min",
+          "summary": "Closures are functions that remember variables from their lexical scope.",
+          "sections": [
+            {
+              "heading": "Lexical scope",
+              "content": "A variable’s scope is determined by where it’s declared in the source code. Inner functions can access outer variables."
+            },
+            {
+              "heading": "What is a closure?",
+              "content": "When an inner function uses variables from an outer function, it “closes over” those variables. That’s the closure."
+            },
+            {
+              "heading": "Why it matters",
+              "content": "Closures enable patterns like data encapsulation, callbacks, and function factories."
+            }
+          ],
+          "codeSamples": [
+            {
+              "lang": "js",
+              "title": "Closure example",
+              "code": "function makeCounter() {\n  let count = 0;\n  return function() {\n    return ++count;\n  }\n}\n\nconst counter = makeCounter();\ncounter(); // 1\ncounter(); // 2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "MDN - Closures",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"
+            }
+          ]
+        },
+        {
+          "id": "async-await",
+          "title": "Async/Await Basics",
+          "level": "Intermediate",
+          "estimatedTime": "30 min",
+          "summary": "Write asynchronous code that looks synchronous using async/await.",
+          "sections": [
+            {
+              "heading": "async functions",
+              "content": "An async function always returns a Promise. Use await to pause within the async function until the Promise resolves."
+            },
+            {
+              "heading": "Error handling",
+              "content": "Use try/catch around await calls. Rejections are caught like thrown errors."
+            }
+          ],
+          "codeSamples": [
+            {
+              "lang": "js",
+              "title": "Fetch with async/await",
+              "code": "async function getUser(id) {\n  try {\n    const res = await fetch(`/api/users/${id}`);\n    if (!res.ok) throw new Error('Request failed');\n    return await res.json();\n  } catch (err) {\n    console.error(err);\n    return null;\n  }\n}"
+            }
+          ],
+          "resources": [
+            {
+              "title": "MDN - Async functions",
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "title": "Frontend Resources",
+      "description": "Learning references and tooling knowledge.",
+      "lessons": [
+        {
+          "id": "mdn-and-web-platform",
+          "title": "MDN & the Web Platform",
+          "level": "Beginner",
+          "estimatedTime": "15 min",
+          "summary": "How to use MDN effectively as your primary frontend reference.",
+          "sections": [
+            {
+              "heading": "Use “Learn” for concepts",
+              "content": "MDN has curated guides (Learn) that teach topics step-by-step."
+            },
+            {
+              "heading": "Use reference pages for specifics",
+              "content": "For exact syntax, browser support, and examples, use the Reference documentation."
+            }
+          ],
+          "resources": [
+            {
+              "title": "MDN",
+              "url": "https://developer.mozilla.org/en-US/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
