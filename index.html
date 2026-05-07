@@ -7,44 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="navbar">
+    <span class="nav-logo">Frontend Lab</span>
+    <input type="search" id="search" class="search" placeholder="Search concepts…">
+    <button id="themeToggle" class="theme-btn">🌙</button>
+  </nav>
 
-  <button id="themeToggle" class="theme-btn">🌙</button>
-
-  <div class="card">
-
-    <img src="https://i.pravatar.cc/150" alt="profile" class="profile-img">
-
-    <h2>Frontend Lab</h2>
-
-    <p class="role">
-      <span id="typing"></span>
-    </p>
-
-    <p class="desc">
-      Building modern, responsive and interactive web interfaces using HTML, CSS & JavaScript.
-    </p>
-    <p class="desc">
-      Building modern, responsive and interactive web interfaces using HTML, CSS & JavaScript.
-    </p>
-    <p class="desc">
-      Building modern, responsive and interactive web interfaces using HTML, CSS & JavaScript.
-    </p>
-
-    <div class="skills" id="skills"></div>
-
-    <button id="contactBtn">Contact Me</button>
-  </div>
-
-  <!-- Contact Modal -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <h3>Contact Me</h3>
-      <input type="text" id="name" placeholder="Your Name">
-      <input type="text" id="message" placeholder="Your Message">
-      <button id="sendBtn">Send</button>
-      <button id="closeBtn">Close</button>
-    </div>
-  </div>
+  <main id="main" class="main"></main>
 
   <script src="script.js"></script>
 </body>
